@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "dzannotti.vscode-babel-coloring",
+    "EditorConfig.editorconfig",
+    "dbaeumer.vscode-eslint",
+    "flowtype.flow-for-vscode",
+    "Orta.vscode-jest",
+    "esbenp.prettier-vscode"
+  ]
+}
