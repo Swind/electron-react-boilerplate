@@ -68,6 +68,7 @@ export default merge.smart(baseConfig, {
               'transform-class-properties',
               'transform-es2015-classes',
               'react-hot-loader/babel',
+              ['import', { libraryName: 'antd', style: 'css' }], // `style: true` for less
             ],
           },
         },
@@ -102,6 +103,24 @@ export default merge.smart(baseConfig, {
             },
           },
         ],
+        exclude: /node_modules/,
+      },
+      {
+        test: /^((?!\.global).)*\.css$/,
+        use: [
+          {
+            loader: 'style-loader',
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true,
+              importLoaders: 1,
+              localIdentName: '[name]__[local]__[hash:base64:5]',
+            },
+          },
+        ],
+        include: /node_modules/,
       },
       // Add SASS support  - compile all .global.scss files and pipe it to style.css
       {

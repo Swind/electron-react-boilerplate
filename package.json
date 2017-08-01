@@ -114,6 +114,7 @@
     "babel-plugin-flow-runtime": "^0.11.1",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-es2015-classes": "^6.24.1",
+    "babel-plugin-import": "^1.1.0",
     "babel-preset-env": "^1.5.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-react-hmre": "^1.1.1",
@@ -174,6 +175,7 @@
     "webpack-merge": "^4.1.0"
   },
   "dependencies": {
+    "antd": "^2.11.1",
     "devtron": "^1.4.0",
     "electron-debug": "^1.2.0",
     "font-awesome": "^4.7.0",

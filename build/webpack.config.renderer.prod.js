@@ -49,6 +49,20 @@ export default merge.smart(baseConfig, {
             },
           },
         }),
+        exclude: /node_modules/,
+      },
+      {
+        test: /^((?!\.global).)*\.css$/,
+        use: ExtractTextPlugin.extract({
+          use: {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+              localIdentName: '[name]__[local]__[hash:base64:5]',
+            },
+          },
+        }),
+        include: /node_modules/,
       },
       // Add SASS support  - compile all .global.scss files and pipe it to style.css
       {
